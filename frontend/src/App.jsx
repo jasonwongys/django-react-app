@@ -5,6 +5,8 @@ import Register from "./pages/Register";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import ProtectedRoute from "./components/ProtectedRoutes";
+import Navbar from "./components/Navbar";
+import CreateNote from "./components/CreateNote";
 
 function Logout() {
   localStorage.clear();
@@ -24,11 +26,17 @@ function App() {
           path="/"
           element={
             <ProtectedRoute>
-              <Home />
+              <Navbar/>
+                <Home />
+                
+              
             </ProtectedRoute>
           }
         />
+        <Route path="/api/notes" element={<CreateNote />} />
+
         <Route path="/login" element={<Login />} />
+
         <Route path="/logout" element={<Logout />} />
         <Route path="/register" element={<RegisterAndLogout />} />
         <Route path="*" element={<NotFound />} />
