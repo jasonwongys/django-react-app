@@ -5,8 +5,8 @@ import classNames from 'classnames'
 const navigation = [
   { name: 'Dashboard', href: '/', current: true },
   { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
   { name: 'Calendar', href: '#', current: false },
+  { name: 'Logout', href: '/logout', current: false },
 ]
 
 const Navbar = () => {
@@ -27,8 +27,8 @@ const Navbar = () => {
             <div className="flex flex-shrink-0 items-center">
               <img
                 alt="Your Company"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                className="h-8 w-auto"
+                src="https://img.icons8.com/?size=100&id=12629&format=png&color=000000"
+                className="h-8 w-auto bg-teal-400"
               />
             </div>
             <div className="hidden sm:ml-6 sm:block">
