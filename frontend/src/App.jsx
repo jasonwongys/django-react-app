@@ -6,7 +6,9 @@ import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import ProtectedRoute from "./components/ProtectedRoutes";
 import Navbar from "./components/Navbar";
+import EditNote from "./components/EditNote";
 import CreateNote from "./components/CreateNote";
+import Header from "./pages/Header";
 
 function Logout() {
   localStorage.clear();
@@ -27,13 +29,15 @@ function App() {
           element={
             <ProtectedRoute>
               <Navbar/>
-                <Home />
-                
+              <Header />
+              <Home />
               
+             
             </ProtectedRoute>
           }
         />
         <Route path="/api/notes" element={<CreateNote />} />
+        <Route path="/api/notes/edit/:id" element={<EditNote />} />
 
         <Route path="/login" element={<Login />} />
 

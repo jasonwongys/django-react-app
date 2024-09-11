@@ -16,5 +16,20 @@ class UserSerializer(serializers.ModelSerializer):
 class NoteSerializer(serializers.ModelSerializer):
     class Meta:
         model = Note
-        fields = ['id', 'title', 'content', 'created_at','author']
+        fields = ['id', 'title', 'content', 'created_at','author','type']
         extra_kwargs = {'author': {'read_only': True}}
+        
+    def create(self, validated_data):
+        print(validated_data)
+        note = Note.objects.create(**validated_data)
+        return note
+    
+    def update(self, instance, validated_data):
+        instance.title = validated_data.get('title', instance.title)
+        instance.content = validated_data.get('content', instance.content)
+        instance.type = validated_data.get('type', instance.type)
+        instance.save()
+        return instance
+    
+    def delete(self, instance):
+        instance.delete()

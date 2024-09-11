@@ -6,3 +6,20 @@ Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+Steps to start backend and frontend
+
+Open gitbash terminal
+1)run command: source .venv/Scripts/activate
+2)cd backend
+3)py manage.py runserver
+
+ADD/CHANGE Models
+
+py manage.py makemigrations
+py manage.py migrate
+
+
+FRontend
+1) cd frontend
+2) npm run dev
