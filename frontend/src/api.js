@@ -1,7 +1,7 @@
 import axios from "axios"
 import { ACCESS_TOKEN } from "./constants"
 
-const apiUrl = "/choreo-apis/djangoreactapp/backend/v1";
+const apiUrl = "https://django-react-app-gilt.vercel.app/";
 
 // const apiUrl = "XXXXXXXXXXXXXXXXXXXXX"
 
