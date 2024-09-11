@@ -1,7 +1,7 @@
 import axios from "axios"
 import { ACCESS_TOKEN } from "./constants"
 
-const apiUrl = "https://django-react-7geaz3utr-jasonwongys-projects.vercel.app/";
+const apiUrl = "https://django-react-app-gilt.vercel.app/";
 
 // const apiUrl = "XXXXXXXXXXXXXXXXXXXXX"
 
